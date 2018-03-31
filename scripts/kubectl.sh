@@ -1,8 +1,8 @@
 #!/bin/sh
 MASTER_HOST=188.166.0.132
-CA_CERT=~/deis-demo/ansible/certs/ca.pem
-ADMIN_KEY=~/deis-demo/ansible/certs/admin-key.pem
-ADMIN_CERT=~/deis-demo/ansible/certs/admin.pem
+CA_CERT=~/deis-project/ansible/certs/ca.pem
+ADMIN_KEY=~/deis-project/ansible/certs/admin-key.pem
+ADMIN_CERT=~/deis-project/ansible/certs/admin.pem
 if [ ! -f /usr/local/bin/kubectl ] ; then
   curl -O https://storage.googleapis.com/kubernetes-release/release/v1.2.3/bin/linux/amd64/kubectl
   chmod +x kubectl

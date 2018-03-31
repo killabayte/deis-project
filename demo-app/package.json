@@ -1,7 +1,7 @@
 {
-  "name": "deis-demo",
+  "name": "deis-project",
   "version": "1.0.0",
-  "description": "deis-demo app",
+  "description": "deis-project app",
   "main": "app.js",
   "dependencies": {
     "express": "^4.13.4"
