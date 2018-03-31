@@ -1,0 +1,27 @@
+# file: kubernetes.yml
+- hosts: coreos
+  gather_facts: False
+  roles:
+    - defunctzombie.coreos-bootstrap
+  tasks:
+  - name: install httplib2
+    pip: name=httplib2
+- hosts: kubernetes-master
+  sudo: yes
+  roles:
+    - etcd
+    - common
+    - certs
+    - flannel
+    - kubernetes-master
+- hosts: kubernetes-workers
+  sudo: yes
+  roles:
+    - common
+    - certs-worker
+    - flannel
+    - kubernetes-worker
+- hosts: loadbalancers
+  sudo: yes
+  roles:
+    - loadbalancer

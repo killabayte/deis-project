@@ -1,0 +1,10 @@
+---
+dependencies:
+  - kubernetes-master/kubelet-master
+  - kubernetes-master/kube-apiserver
+  - kubernetes-master/kube-proxy
+  - kubernetes-master/kube-controller
+  - kubernetes-master/kube-scheduler
+  - kubernetes-master/calico
+  - kubernetes-master/policy-agent
+  - kubernetes-master/cni
